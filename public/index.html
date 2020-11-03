@@ -23,6 +23,15 @@
     </div>
     </div>
     <script src = "script.js"></script>
+    <script>
+        const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+
+        const title = [];
+
+        fetch(endpoint)
+            .then(blob => blob.json())
+            .then(data => console.log(data))
+    </script>
 </body>
 </html>
 hello world
