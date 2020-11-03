@@ -31,8 +31,18 @@
                 </ul>
                 <script>
                     const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
+
                     const food = [];
+
                     fetch(endpoint)
+                        .then(blob => blob.json())
+                        .then(data => food.push(...data))
+                    function findMatches(wordToMatch, food) {
+                        return food.filter(place => {
+                            const regex = new RegExp(wordToMatch, "gi");
+                            return location.address.match(regex) || location.zipcode.match(regex)
+                        })
+                    }
                 </script>
             </div>
         </div>
