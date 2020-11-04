@@ -13,14 +13,14 @@
 <body>
     <div class="wrapper">
     <div class="container">
-        <!-- <div id = "searchWrapper">
+        <div id = "searchWrapper">
             <input
                 type = "text"
                 name = "searchBar"
                 id = "searchBar"
                 placeholder="search for a character"
                 />
-        </div> -->
+        </div>
         <div class="row">
             <div class="column" style="margin-top: 10%; bottom: 10%">
             <div class="header">
@@ -37,41 +37,7 @@
 
 
                 </ul>
-                <script>
-                    const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
-
-                    const food = [];
-
-                    fetch(endpoint)
-                        .then(blob => blob.json())
-                        .then(data => food.push(...data))
-                    function findMatches(wordToMatch, food) {
-                        return food.filter(place => {
-                            const regex = new RegExp(wordToMatch, "gi");
-                            return place.address_line_1.match(regex) || place.zip.match(regex)
-                        })
-                    }
-
-                    function displayMatches() {
-                        const matchArray = findMatches(this.value, food);
-                        const hyml = matchArray.map(place => {
-                            return `
-                            <li>
-                                <span class="locate">${place.address_line_1}, ${place.zip}</span>
-                                <span class="cat">${place.category}</span>
-                            </li> 
-                            `;
-                        }).join('');
-                        suggestions.innerHTML = html;
-                    }
-
-                    const searchInput = document.querySelector('.search')
-                    const suggestions = document.querySelector('.suggestions');
-
-                    searchInput.addEventListener('change', displayMatches);
-                    searchInput.addEventListener('keyup', displayMatches);
-
-                </script>
+    
             </div>
         </div>
             <!-- <form>
