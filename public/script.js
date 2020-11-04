@@ -16,10 +16,9 @@ const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json
   const matchArray = findMatches(this.value, food);
   const hyml = matchArray.map(place => {
   return `
-  <li>
-    <span class="locate">${place.address_line_1}, ${place.zip}</span>
-    <span class="cat">${place.category}</span>
-  </li> 
+  ${place.address_line_1}, ${place.zip}</span>
+  ${place.category}
+   
       `;
     }).join('');
   suggestions.innerHTML = html;
