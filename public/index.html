@@ -40,9 +40,29 @@
                     function findMatches(wordToMatch, food) {
                         return food.filter(place => {
                             const regex = new RegExp(wordToMatch, "gi");
-                            return location.address.match(regex) || location.zipcode.match(regex)
+                            return place.address_line_1.match(regex) || place.zip.match(regex)
                         })
                     }
+
+                    function displayMatches() {
+                        const matchArray = findMatches(this.value, food);
+                        const hyml = matchArray.map(place => {
+                            return `
+                            <li>
+                                <span class="locate">${place.address_line_1}, ${place.zip}</span>
+                                <span class="cat">${place.category}</span>
+                            </li> 
+                            `;
+                        }).join('');
+                        suggestions.innerHTML = html;
+                    }
+
+                    const searchInput = document.querySelector('.search')
+                    const suggestions = document.querySelector('.suggestions');
+
+                    searchInput.addEventListener('change', displayMatches);
+                    searchInput.addEventListener('keyup', displayMatches);
+
                 </script>
             </div>
         </div>
