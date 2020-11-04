@@ -115,6 +115,7 @@ async function loadData() {
     return collection;
   }, []);
 
+  
   console.table(newDataShape);
 
   const div2 = document.createElement('div');
