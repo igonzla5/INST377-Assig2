@@ -79,7 +79,6 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max1 - min1 + 1) + min1); // The maximum is inclusive and the minimum is inclusive
 }
 
-searc
 
 async function loadData() {
   const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
@@ -87,7 +86,7 @@ async function loadData() {
   sessionStorage.setItem('restaurantData', JSON.stringify(json))
 
 
-  const arrayOfTenItems = range(10);
+  const arrayOfTenItems = range(1000);
   const randomRestaurantsArray = arrayOfTenItems.map((item) => {
     const which = getRandomIntInclusive(0, json.length);
     const restaurant = json[which]; // we are not worrying about uniqueness here
