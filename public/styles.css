@@ -67,6 +67,7 @@ html, body, h2, p {
     margin: 10px 5px;
     box-sizing: border-box;
     background-color:#eb8510;
+    color: black;
 
     
   }
@@ -102,7 +103,7 @@ html, body, h2, p {
     border: 1px solid black;
     padding: 5px 10px;
     font-size: 12px;
-    color: #d4872f;
+    color: black;
 }
 
 #searchWrapper {
