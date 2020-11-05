@@ -8,7 +8,7 @@ body {
   
 }
 
-html, body, h2, p {
+html, body {
     margin: 0;
     padding: 0;
   }
@@ -27,20 +27,13 @@ html, body, h2, p {
     justify-content: space-between;
   }
   
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   
   
   /* || typography */
   
-  h1, h2, h3 {
-    font-family: 'Lobster Two', cursive;
-    color: #2a2a2a;
-  }
+  
   
   h1 {
     font-size: 4rem;
@@ -49,10 +42,7 @@ html, body, h2, p {
     text-decoration: underline;
   }
   
-  h2 {
-    font-size: 3rem;
-    font-weight: 800;
-  }
+  
   
   
   /* .row{
@@ -70,22 +60,6 @@ html, body, h2, p {
     color: black;
 
     
-  }
-
-  .suggestions {
-
-  }
-  
-  .header {
-    margin-bottom: 15px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    background-color: #6db2d1;
-    align-items: center;
   }
   
   
@@ -117,9 +91,13 @@ html, body, h2, p {
     right: 15px;
 }
 
- 
+.restaurantList {
+  background-color: #6db2d1;
+}
+
+
   
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1600px) {
     .container {
       justify-content: center;
     }
