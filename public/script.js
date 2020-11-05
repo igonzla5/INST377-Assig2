@@ -1,5 +1,7 @@
 // const endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
+// const { zip } = require("cypress/types/lodash");
+
 //  const food = [];
 
 //  fetch(endpoint)
@@ -64,6 +66,49 @@
 //         console.log(err);
 //       });
 //   });
+
+
+const restaurantList = document.getElementById("restaurantList");
+const searchBar = document.getElementById('searchBar');
+let re = [];
+
+searchBar.addEventListener('keyup', (e) => {
+  const searchString = e.target.value.toLowerCase();
+
+  const filteredrest = re.filter((zip) => {
+    return (
+      zip.name.toLowerCase().includes(searchString) ||
+      zip.category.toLowerCase().includes(searchString)
+    );
+  });
+  displayrest(filteredrest);
+});
+
+const loadrest = async () => {
+  try {
+      const res = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+      re = await res.json();
+      displayrest(re);
+  } catch (err) {
+      console.error(err);
+  }
+};
+
+const displayrest = (zips) => {
+  const htmlString = zips
+      .map((zip) => {
+          return `
+          <li class="zip">
+              <h2>${zip.name}</h2>
+              <p>address: ${zip.address}</p>
+          </li>
+      `;
+      })
+      .join('');
+  restaurantList.innerHTML = htmlString;
+};
+
+loadrest();
 
 function range(int) {
   const arr = [];
