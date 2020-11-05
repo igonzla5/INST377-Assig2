@@ -4,15 +4,6 @@
 
 //  const food = [];
 
-//  fetch(endpoint)
-//   .then(blob => blob.json())
-//   .then(data => food.push(...data))
-//   function findMatches(wordToMatch, food) {
-//   return food.filter(place => {
-//   const regex = new RegExp(wordToMatch, "gi");
-//   return place.address_line_1.match(regex) || place.zip.match(regex)
-//   })
-//   }
 
 //   function displayMatches() {
 //   const matchArray = findMatches(this.value, food);
@@ -175,3 +166,19 @@ async function loadData() {
 }
 
 window.onload = loadData;
+
+function matchingwords(wordToMatch, data){
+  return data.filter((food) => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return item.name.match(regex) || item.category.match(regex);
+  });
+}
+fetch(endpoint)
+.then(blob => blob.json())
+.then(data => food.push(...data))
+function findMatches(wordToMatch, food) {
+return food.filter(place => {
+const regex = new RegExp(wordToMatch, "gi");
+return place.address_line_1.match(regex) || place.zip.match(regex)
+})
+}
