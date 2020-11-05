@@ -79,6 +79,8 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max1 - min1 + 1) + min1); // The maximum is inclusive and the minimum is inclusive
 }
 
+searc
+
 async function loadData() {
   const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   const json = await data.json();
@@ -115,7 +117,7 @@ async function loadData() {
     return collection;
   }, []);
 
-  
+
   console.table(newDataShape);
 
   const div2 = document.createElement('div');
