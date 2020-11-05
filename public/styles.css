@@ -4,6 +4,8 @@ body {
     font-weight: 400;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
+    text-align: center;
+  
 }
 
 html, body, h2, p {
@@ -14,9 +16,6 @@ html, body, h2, p {
   html {
     font-size: 10px;
   }
-
-
-
   
   .container {
     max-width: 960px;
@@ -82,9 +81,11 @@ html, body, h2, p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     background-color: #D9C9BA;
     align-items: center;
+    text-align: center;
   }
   
   
