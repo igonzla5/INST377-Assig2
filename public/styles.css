@@ -82,10 +82,10 @@ html, body {
 
 #searchWrapper {
     position: relative;
+    content: '🔍';
 }
 
 #searchWrapper::after {
-    content: '🔍';
     position: absolute;
     top: 7px;
     right: 15px;
