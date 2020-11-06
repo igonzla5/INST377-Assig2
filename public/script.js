@@ -19,7 +19,7 @@ function displayMatches(e, dataSet) {
   if (e.target.value.length == 0) {
     placesHTML = [];
   }
-  return placesHTML;
+  return placesHTML
 }
 
 async function mainT() {
