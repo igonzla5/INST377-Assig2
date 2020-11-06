@@ -65,6 +65,7 @@ body {
 #searchWrapper {
     position: relative;
 }
+
 #searchWrapper ul{
   width: 500px;
   list-style: none;
@@ -90,12 +91,6 @@ body {
   margin-bottom: 100px;
 }
 
-  /* @media screen and (max-width: 1600px) {
-    .container {
-      justify-content: center;
-    }
-    
-  } */
   @media (min-width: 1000px){
     h1 {
       font-size: 5rem;
@@ -106,5 +101,4 @@ body {
     .column:first-child, .column:first-child{
       margin-left: 0px;
     }
-    
   }
