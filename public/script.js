@@ -201,7 +201,7 @@ function displayMatches(e, dataSet) {
   return placesHTML;
 }
 
-async function mainThread() {
+async function mainT() {
   const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
   const json = await data.json();
   const input = document.querySelector('input[type="text"]');
@@ -212,4 +212,4 @@ async function mainThread() {
   });
 }
 
-window.onload = mainThread;
+window.onload = mainT;
