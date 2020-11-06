@@ -93,22 +93,9 @@ body {
     .container {
       justify-content: center;
     }
-    .description {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex: 1 0 auto;
-      align-items: center;
-      justify-content: space-evenly;
-      margin: 0;
-      margin-bottom: 15px;
-    }
-
-    .description p {
-      margin: 15px 0 0 0;
-    }
+    
   } */
-  @media (min-width: 1600px){
+  @media (min-width: 550px){
     h1 {
       font-size: 5rem;
     }
@@ -118,4 +105,5 @@ body {
     .column:first-child, .column:first-child{
       margin-left: 0px;
     }
+    
   }
