@@ -28,9 +28,9 @@ async function mainT() {
   const json = await data.json();
   const input = document.querySelector('input[type="text"]');
   input.addEventListener('input', (e) => {
-    const makeMatchlst = displayMatches(e,json);
+    const makeMlst = displayMatches(e,json);
     const target = document.querySelector('.restaurantList');
-    target.innerHTML = makeMatchlst;
+    target.innerHTML = makeMlst;
   });
 }
 
