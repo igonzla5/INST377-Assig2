@@ -9,11 +9,11 @@ function displayMatches(e, dataSet) {
   const matches = matchingwords(e.target.value, dataSet);
   let placesHTML = matches.map((place) => `
   <li>
-      <span class="name">${place.name}</span><br>
-      <span class="category">${place.category}</span>
-      <address>${place.address_line_1}<br>
-      ${place.city}<br>
-      ${place.zip}<address>
+      <span class="name"><b>${place.name}</b></span><br>
+      <span class="category"><b>${place.category}</b></span>
+      <address><b>${place.address_line_1}</b><br>
+      <b>${place.city}</b><br>
+      <b>${place.zip}</b><address>
     </li>
   `);
   if (e.target.value.length == 0) {
