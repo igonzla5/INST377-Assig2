@@ -46,7 +46,6 @@ body {
     background-color:#eb8510;
   }
   
-  
   h1 {
     flex: 5;
     text-transform: uppercase;
@@ -76,8 +75,6 @@ body {
   border-image: initial;
 }
 
-
-
 #searchWrapper li{
   border-bottom: 1px solid rgb(144, 186, 222);
   margin: 0px;
@@ -90,7 +87,6 @@ body {
 .restaurantList {
   border-top: 1px solid red ;
   margin-bottom: 100px;
-  /* color: black; */
 }
 
   /* @media screen and (max-width: 1600px) {
@@ -112,7 +108,7 @@ body {
       margin: 15px 0 0 0;
     }
   } */
-  @media (min-width: 550px){
+  @media (min-width: 1600px){
     h1 {
       font-size: 5rem;
     }
