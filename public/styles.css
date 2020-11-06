@@ -18,7 +18,7 @@ html, body {
   }
   
   .container {
-    max-width: 2000px;
+    max-width: 5000px;
     min-height: 100%;
     display: flex;
     flex-direction: row;
@@ -72,13 +72,45 @@ html, body {
     
 }
 #searchWrapper ul{
+  width: auto;
   list-style: none;
+  margin: 0px;
   padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+/* ul, form {
+  margin-bottom: 2.5rem;
+}
+ol, ul {
+  padding-left: 0px;
+  margin-top: 0px;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  list-style: inside circle;
+} */
+
+#searchWrapper li{
+  border-bottom: 1px solid rgb(144,, 186, 222);
+  margin: 0px;
+  padding: 10px;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #00ccff 0%, #0000ff 100%);
 }
 .restaurantList {
   background-color: #6db2d1;
   /* display: inline-block; */
   border-top: 1px solid red ;;
+  margin-bottom: 100px;
 }
 /* .restaurantList > div{
   padding: 15px;
@@ -90,7 +122,7 @@ html, body {
 .restaurantList > div:hover{
   background-color: pink;
 } */
-  @media screen and (max-width: 1600px) {
+  /* @media screen and (max-width: 1600px) {
     .container {
       justify-content: center;
     }
@@ -107,5 +139,16 @@ html, body {
 
     .description p {
       margin: 15px 0 0 0;
+    }
+  } */
+  @media (min-width: 550px){
+    h1 {
+      font-size: 5rem;
+    }
+    .one-half.column {
+      width: 48%;
+    }
+    .column:first-child, .column:first-child{
+      margin-left: 0px;
     }
   }
