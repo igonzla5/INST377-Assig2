@@ -4,6 +4,7 @@ function matchingwords(wordToMatch, data) {
     return item.name.match(regex) || item.category.match(regex);
   });
 }
+
 function displayMatches(e, dataSet) {
   console.log(e.target.value);
   const matches = matchingwords(e.target.value, dataSet);
@@ -19,8 +20,7 @@ function displayMatches(e, dataSet) {
   if (e.target.value.length == 0) {
     placesHTML = [];
   }
-  return placesHTML
-  
+  return placesHTML 
 }
 
 async function mainT() {
@@ -33,5 +33,4 @@ async function mainT() {
     target.innerHTML = makeMlst;
   });
 }
-
 window.onload = mainT;
