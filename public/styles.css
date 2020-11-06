@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    color: black;
+    color: #12b2de;
     text-align: center;
     background-color: #12b2de;
 }
@@ -55,7 +55,7 @@ body {
   }
   
   #searchBar {
-    width: 100%;
+    width: 500px;
     height: 32px;
     border-radius: 3px;
     border: 1px solid black;
@@ -68,7 +68,7 @@ body {
     position: relative;
 }
 #searchWrapper ul{
-  width: 250px;
+  width: 500px;
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -108,6 +108,7 @@ ul {
 .restaurantList {
   border-top: 1px solid red ;
   margin-bottom: 100px;
+  color: black;
 }
 
   /* @media screen and (max-width: 1600px) {
