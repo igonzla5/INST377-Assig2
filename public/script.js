@@ -20,6 +20,7 @@ function displayMatches(e, dataSet) {
     placesHTML = [];
   }
   return placesHTML
+  
 }
 
 async function mainT() {
