@@ -1,14 +1,11 @@
 body {
-  background-color: aquamarine;
-}
-
-body {
     font-size: 1.5em;
     line-height: 1.6;
     font-weight: 400;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     text-align: center;
+    background-color: aquamarine;
 }
 
 html, body {
@@ -30,14 +27,6 @@ html, body {
     justify-content: space-between;
   }
   
-
-
-  
-  
-  /* || typography */
-  
-  
-  
   h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 10px#333040;
@@ -45,9 +34,7 @@ html, body {
     text-decoration: underline;
   }
   
-  
-  
-  
+
   /* .row{
     display: flex;
     flex-direction: column;
@@ -61,10 +48,7 @@ html, body {
     box-sizing: border-box;
     background-color:#eb8510;
     color: black;
-
-    
   }
-  
   
   
   h1 {
@@ -85,21 +69,27 @@ html, body {
 
 #searchWrapper {
     position: relative;
+    
 }
-
-#searchWrapper::after {
-    content: '🔍';
-    position: absolute;
-    top: 7px;
-    right: 15px;
+#searchWrapper ul{
+  list-style: none;
+  padding: 0px;
 }
-
 .restaurantList {
   background-color: #6db2d1;
+  /* display: inline-block; */
+  border-top: 1px solid red ;;
+}
+/* .restaurantList > div{
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-top: 1px solid blue;
 }
 
-
-  
+.restaurantList > div:hover{
+  background-color: pink;
+} */
   @media screen and (max-width: 1600px) {
     .container {
       justify-content: center;
