@@ -1,7 +1,7 @@
 function matchingwords(wordToMatch, data) {
   return data.filter((item) => {
     const regex = new RegExp(wordToMatch, 'gi');
-    return item.name.match(regex) || item.category.match(regex);
+    return item.name.match(regex) || item.category.match(regex) || item.zip.match(regex);
   });
 }
 
