@@ -1,22 +1,22 @@
-function matchingwords(wordToMatch, data) {
-  return data.filter((item) => {
+function matchingwords(wordToMatch, info) {
+  return info.filter((piece) => {
     const re = new RegExp(wordToMatch, 'gi');
-    return item.name.match(re) || item.category.match(re) || item.zip.match(re);
+    return piece.name.match(re) || piece.category.match(re) || piece.zip.match(re);
   });
 }
 
-function displayMatches(e, dataSet) {
-  const matches = matchingwords(e.target.value, dataSet);
-  let placesHTML = matches.map((place) => `
+function displayMatches(i, sInfo) {
+  const match = matchingwords(i.target.value, sInfo);
+  let placesHTML = match.map((location) => `
   <li>
-      <span class="name"><b>${place.name}</b></span><br>
-      <span class="category"><b>${place.category}</b></span>
-      <address><b>${place.address_line_1}</b><br>
-      <b>${place.city}</b><br>
-      <b>${place.zip}</b><address>
+      <span class="name"><b>${location.name}</b></span><br>
+      <span class="category"><b>${location.category}</b></span>
+      <address><b>${location.address_line_1}</b><br>
+      <b>${location.city}</b><br>
+      <b>${location.zip}</b><address>
     </li>
   `);
-  if (e.target.value.length == 0) {
+  if (i.target.value.length == 0) {
     placesHTML = [];
   }
   return placesHTML;
@@ -28,8 +28,8 @@ async function mainT() {
   const input = document.querySelector('input[type="text"]');
   input.addEventListener('input', (e) => {
     const makeMlst = displayMatches(e,json);
-    const target = document.querySelector('.restaurantList');
-    target.innerHTML = makeMlst;
+    const trg = document.querySelector('.restaurantList');
+    trg.innerHTML = makeMlst;
   });
 }
 window.onload = mainT;
