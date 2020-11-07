@@ -1,12 +1,11 @@
 function matchingwords(wordToMatch, data) {
   return data.filter((item) => {
-    const regex = new RegExp(wordToMatch, 'gi');
-    return item.name.match(regex) || item.category.match(regex) || item.zip.match(regex);
+    const re = new RegExp(wordToMatch, 'gi');
+    return item.name.match(re) || item.category.match(re) || item.zip.match(re);
   });
 }
 
 function displayMatches(e, dataSet) {
-  console.log(e.target.value);
   const matches = matchingwords(e.target.value, dataSet);
   let placesHTML = matches.map((place) => `
   <li>
@@ -20,7 +19,7 @@ function displayMatches(e, dataSet) {
   if (e.target.value.length == 0) {
     placesHTML = [];
   }
-  return placesHTML 
+  return placesHTML;
 }
 
 async function mainT() {
