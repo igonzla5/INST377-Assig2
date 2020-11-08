@@ -91,7 +91,7 @@ body {
   margin-bottom: 100px;
 }
 
-  @media (min-width: 1000px){
+  @media (min-width: 550px){
     h1 {
       font-size: 5rem;
     }
