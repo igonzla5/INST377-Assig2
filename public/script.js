@@ -7,7 +7,7 @@ function matchingwords(wordToMatch, info) {
 
 function displayMatches(i, sInfo) {
   const match = matchingwords(i.target.value, sInfo);
-  let placesHTML = match.map((location) => `
+  let locationsHTML = match.map((location) => `
   <li>
       <span class="name"><b>${location.name}</b></span><br>
       <span class="category"><b>${location.category}</b></span>
@@ -17,9 +17,9 @@ function displayMatches(i, sInfo) {
     </li>
   `);
   if (i.target.value.length == 0) {
-    placesHTML = [];
+    locationsHTML = [];
   }
-  return placesHTML;
+  return locationsHTML;
 }
 
 async function mainT() {
